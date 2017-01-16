@@ -6,12 +6,13 @@ if(process.argv[2]){
 }
 
 var browserstack = require('browserstack-local');
+var config = require('../testem.json');
 var fs = require('fs');
 
 var pidFile = 'browserstack-local.pid';
 var bs_local = new browserstack.Local();
 var bs_local_args = {
-  'key': process.env.BROWSERSTACK_ACCESS_KEY,
+  'key': process.env.BROWSERSTACK_ACCESS_KEY || config.bs_key,
   'forcelocal': true,
   'v': true
 };
