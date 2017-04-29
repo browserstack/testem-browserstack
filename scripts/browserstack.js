@@ -37,6 +37,10 @@ var settings = {
   build: 'testem-browserstack'
 };
 
+if (process.env.BROWSERSTACK_LOCAL_IDENTIFIER) {
+  settings['browserstack.localIdentifier'] = process.env.BROWSERSTACK_LOCAL_IDENTIFIER
+}
+
 for (var i in settings) {
   if (settings[i] === null || settings[i] === '' || settings[i] === 'nil') {
     delete settings[i];
