@@ -4,6 +4,7 @@
 
   "framework": "jasmine",
   "parallel": 4,
+  "browser_start_timeout" : 600,
   
   "on_start": {
     "command": "kill -9 $(ps -A | grep BrowserStackLocal | grep -v grep | cut -d ' ' -f2); ./scripts/browserstack-local.js &",
