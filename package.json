@@ -15,7 +15,7 @@
   "devDependencies": {
     "testem": "*",
     "browserstack": "*",
-    "selenium-webdriver": "^2.53.2"
+    "selenium-webdriver": "^4.40.0"
   },
   "dependencies": {
     "browserstack-local": "^1.0.0"
